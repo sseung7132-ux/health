@@ -100,19 +100,19 @@ if st.sidebar.button(" 건강 상태 분석 " , type="primary"):
     st.subheader(" 맞춤형 피드백 조언")
     #3.1 bmi
     if  bmi_status in ["과체중","비만"] : 
-        st.warning("** 체중 관리필요 ** : 체중 관리가 필요합니다. 유산소 운동과 식단 조절을 병행하세요")
+        st.warning("**체중 관리필요** : 체중 관리가 필요합니다. 유산소 운동과 식단 조절을 병행하세요")
     elif  bmi_status == "저체중" :    
-        st.info("** 근력 강화필요 ** : 근력 운동을 통해 근육량을 늘리고 균형 잡힌 영향을 섭취하세요")
-    else : st.success ("** 정상 체중 ** : 현재 체중을 잘 유지하고 계십니다.")    
+        st.info("**근력 강화필요** : 근력 운동을 통해 근육량을 늘리고 균형 잡힌 영향을 섭취하세요")
+    else : st.success ("**정상 체중** : 현재 체중을 잘 유지하고 계십니다.")    
     #3.2 score
     
-    if  score >= 80  : st.success ("** 아중 훌륭한  생활 습관을 유지하고 있습니다. 현재 상태를 잘 유지하세요.")    
+    if  score >= 80  : st.success ("**아중 훌륭한  생활 습관을 유지하고 있습니다. 현재 상태를 잘 유지하세요.**")    
     else :  
-        st.error(" **개선이 필요한 생활 습관이 발견되었습니다** ")
+        st.error("**개선이 필요한 생활 습관이 발견되었습니다**")
         advice_list =[] 
-        if sleep_time < 6 : advice_list.append("수면 시간이 부족합니다. 하루 7시간 이상의 수면이 필요 합니다.")
-        if exercise_time <0.5 : advice_list.append("운동시간이 부족합니다.일상 속 운동량을 늘려보세요")
-        if steps <7000 : advice_list.append("활동량이 저조합니다. 하루 걸음 수를 점진적으로 늘려보세요")
+        if sleep_time < 6 : advice_list.append("**수면시간**이 부족합니다. 하루 7시간 이상의 수면이 필요 합니다.")
+        if exercise_time <0.5 : advice_list.append("**운동시간**이 부족합니다.일상 속 운동량을 늘려보세요")
+        if steps <7000 : advice_list.append("**활동량**이 저조합니다. 하루 걸음 수를 점진적으로 늘려보세요")
 
         for advice in advice_list:
             st.error(f" * {advice} *")
