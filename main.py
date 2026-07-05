@@ -29,13 +29,13 @@ df = pd.DataFrame(data)
 #print(df[["수면시간", "운동시간", "걸음수", "주관적건강상태", "피로도"]].corr())
 
 # - 웹 페이지 부분 -#
-st.set_page_config(page_title="맞춤형 헬스케어 피트백 시스템" , layout="wide")
+st.set_page_config(page_title="맞춤형 헬스케어 피드백 시스템" , layout="wide")
 
-st.title(" [맞춤형 헬스케어 피트백 시스템 ]")
+st.title(" [맞춤형 헬스케어 피드백 시스템]")
 st.markdown("---------------------")
 
 # 입력 부분 #
-st.sidebar.header(" # 사용장 정보 입력")
+st.sidebar.header(" # 사용자 정보 입력")
 name =  st.sidebar.text_input("이름을 입력하세요" , "이승미");
 height = st.sidebar.number_input("키(cm)" , min_value=100.0 , max_value=250.0, value=168.0) / 100
 weight = st.sidebar.number_input("몸무게(kg)", min_value=30.0, max_value=200.0, value=48.0)
