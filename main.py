@@ -59,7 +59,7 @@ st.markdown("---------------------")
 
 # 입력 부분 #
 st.sidebar.header("📊 사용자 건강 데이터 입력", divider="rainbow")
-name =  st.sidebar.text_input("이름을 입력하세요" , "이승미");
+name =  st.sidebar.text_input("이름을 입력하세요" , "김코치");
 height = st.sidebar.number_input("키(cm)" , min_value=100.0 , max_value=250.0, value=168.0) / 100
 weight = st.sidebar.number_input("몸무게(kg)", min_value=30.0, max_value=200.0, value=48.0)
 
@@ -105,8 +105,10 @@ if st.sidebar.button(" 건강 상태 분석 " , type="primary"):
         st.info("** 근력 강화필요 ** : 근력 운동을 통해 근육량을 늘리고 균형 잡힌 영향을 섭취하세요")
     else : st.success ("** 정상 체중 ** : 현재 체중을 잘 유지하고 계십니다.")    
     #3.2 score
+    
     if  score >= 80  : st.success ("** 아중 훌륭한  생활 습관을 유지하고 있습니다. 현재 상태를 잘 유지하세요.")    
     else :  
+        st.info("**개선이 필요한 생활 습관이 발견되었습니다**")
         advice_list =[] 
         if sleep_time < 6 : advice_list.append("수면 시간이 부족합니다. 하루 7시간 이상의 수면이 필요 합니다.")
         if exercise_time <0.5 : advice_list.append("운동시간이 부족합니다.일상 속 운동량을 늘려보세요")
