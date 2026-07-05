@@ -158,4 +158,4 @@ if st.sidebar.button(" 건강 상태 분석 " , type="primary"):
     st.pyplot(fig)  #   streamlit 웹 페이지 matplotlib
 
 else :
-      st.info("<- 왼쪽 상단 '<< , >>'를 누른 후 사이드바에서 정보를 입력한 후 **[건강상태 분석하기+`]** 버튼을 눌러 주새요")
+      st.info("<- 왼쪽 상단 '**<< , >>**'를 누른 후 사이드바에서 정보를 입력한 후 **[건강상태 분석하기+`]** 버튼을 눌러 주새요")
