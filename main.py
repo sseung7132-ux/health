@@ -4,9 +4,32 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+import matplotlib.font_manager as fm
+
+# 1. 리눅스 시스템에 설치된 나눔 폰트 경로를 직접 검색
+nanum_fonts = [f.fname for f in fm.fontManager.ttflist if 'Nanum' in f.name]
+
+if nanum_fonts:
+    # 2. 발견된 첫 번째 나눔 폰트를 매니저에 강제 등록
+    fm.fontManager.addfont(nanum_fonts[0])
+    font_name = fm.FontProperties(fname=nanum_fonts[0]).get_name()
+    plt.rc('font', family=font_name)
+else:
+    # 3. 만약 시스템에 없으면 기본 경로에서 강제 탐색 시도
+    import os
+    alternative_path = '/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf'
+    if os.path.exists(alternative_path):
+        fm.fontManager.addfont(alternative_path)
+        font_name = fm.FontProperties(fname=alternative_path).get_name()
+        plt.rc('font', family=font_name)
+    else:
+        # 안전장치: 폰트가 정말 없을 때 우회 설정
+        plt.rc('font', family='sans-serif')
+
 # 폰트를 '나눔바른고딕'으로 설정
-plt.rc('font', family='NanumBarunGothic') 
+#plt.rc('font', family='NanumBarunGothic') 
 #plt.rc('font' , family='Malgun Gothic') 
+
 plt.rcParams['axes.unicode_minus'] = False
 
 # 1. 수집된 데이터 예시 (가상 데이터 15명 분량)
