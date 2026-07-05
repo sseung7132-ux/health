@@ -59,7 +59,7 @@ st.markdown("---------------------")
 
 # 입력 부분 #
 st.sidebar.header(" # 사용자 정보 입력")
-st.sidebar.caption("텍스트")
+st.sidebar.header("📊 건강 데이터 입력", divider="rainbow")
 name =  st.sidebar.text_input("이름을 입력하세요" , "이승미");
 height = st.sidebar.number_input("키(cm)" , min_value=100.0 , max_value=250.0, value=168.0) / 100
 weight = st.sidebar.number_input("몸무게(kg)", min_value=30.0, max_value=200.0, value=48.0)
