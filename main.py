@@ -1,4 +1,4 @@
 #min.py
 import streamlit
 
-st.text("hello start"(
+st.text("hello start")
