@@ -1,4 +1,4 @@
 #mian.py
-import streamlit
+import streamlit as st
 
 st.text("hello start")
