@@ -59,6 +59,7 @@ st.markdown("---------------------")
 
 # 입력 부분 #
 st.sidebar.header(" # 사용자 정보 입력")
+st.sidebar.write("텍스트")
 name =  st.sidebar.text_input("이름을 입력하세요" , "이승미");
 height = st.sidebar.number_input("키(cm)" , min_value=100.0 , max_value=250.0, value=168.0) / 100
 weight = st.sidebar.number_input("몸무게(kg)", min_value=30.0, max_value=200.0, value=48.0)
@@ -158,4 +159,4 @@ if st.sidebar.button(" 건강 상태 분석 " , type="primary"):
     st.pyplot(fig)  #   streamlit 웹 페이지 matplotlib
 
 else :
-      st.info("<- 왼쪽 사이드바에 정보를 입력한 후 **[건강상태 분석하기+`]** 버튼을 눌러 주새요")
+      st.info("<- 왼쪽 상단 '<<' 사이드바에 정보를 입력한 후 **[건강상태 분석하기+`]** 버튼을 눌러 주새요")
