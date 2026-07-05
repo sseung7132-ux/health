@@ -108,7 +108,7 @@ if st.sidebar.button(" 건강 상태 분석 " , type="primary"):
     
     if  score >= 80  : st.success ("** 아중 훌륭한  생활 습관을 유지하고 있습니다. 현재 상태를 잘 유지하세요.")    
     else :  
-        st.info("**개선이 필요한 생활 습관이 발견되었습니다**")
+        st.error(" **개선이 필요한 생활 습관이 발견되었습니다** ")
         advice_list =[] 
         if sleep_time < 6 : advice_list.append("수면 시간이 부족합니다. 하루 7시간 이상의 수면이 필요 합니다.")
         if exercise_time <0.5 : advice_list.append("운동시간이 부족합니다.일상 속 운동량을 늘려보세요")
