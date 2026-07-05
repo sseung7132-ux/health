@@ -4,9 +4,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-
-# 굴자 설정 #
-plt.rc('font' , family='Malgun Gothic')
+# 폰트를 '나눔바른고딕'으로 설정
+plt.rc('font', family='NanumBarunGothic') 
+#plt.rc('font' , family='Malgun Gothic')
 plt.rcParams['axes.unicode_minus'] = False
 
 # 1. 수집된 데이터 예시 (가상 데이터 15명 분량)
